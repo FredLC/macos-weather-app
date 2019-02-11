@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48739DD822121B38007F758D /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48739DD722121B38007F758D /* Forecast.swift */; };
 		48739DDB22121E14007F758D /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48739DDA22121E14007F758D /* NSDate.swift */; };
+		48739DDD221228E7007F758D /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48739DDC221228E7007F758D /* NSButton.swift */; };
 		48B914A42211FF8E00F9D8B9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B914A32211FF8E00F9D8B9 /* CurrentWeather.swift */; };
 		48EB6AC82211C5D900ED4B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB6AC72211C5D900ED4B73 /* AppDelegate.swift */; };
 		48EB6ACA2211C5D900ED4B73 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB6AC92211C5D900ED4B73 /* WeatherVC.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		48739DD722121B38007F758D /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		48739DDA22121E14007F758D /* NSDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		48739DDC221228E7007F758D /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
 		48B914A32211FF8E00F9D8B9 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		48EB6AC42211C5D900ED4B73 /* Weathered.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weathered.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48EB6AC72211C5D900ED4B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				48739DDA22121E14007F758D /* NSDate.swift */,
+				48739DDC221228E7007F758D /* NSButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				48EB6ADE2211DAF400ED4B73 /* WeatherCell.swift in Sources */,
 				48B914A42211FF8E00F9D8B9 /* CurrentWeather.swift in Sources */,
 				48739DDB22121E14007F758D /* NSDate.swift in Sources */,
+				48739DDD221228E7007F758D /* NSButton.swift in Sources */,
 				48EB6AE12211E3CE00ED4B73 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -790,15 +790,15 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb1-Fd-624">
-                                <rect key="frame" x="20" y="20" width="360" height="161"/>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb1-Fd-624">
+                                <rect key="frame" x="20" y="31" width="360" height="150"/>
                                 <clipView key="contentView" drawsBackground="NO" id="RRj-wA-YrB">
-                                    <rect key="frame" x="0.0" y="0.0" width="360" height="161"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="I4q-nn-rsK">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="158"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="63x-Gx-mKO">
                                                 <size key="itemSize" width="125" height="125"/>
                                                 <edgeInsets key="sectionInset" left="10" right="10" top="0.0" bottom="0.0"/>
@@ -807,30 +807,58 @@
                                         </collectionView>
                                     </subviews>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="HdK-pw-kC3"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="RBh-1Y-g6p">
                                     <rect key="frame" x="1" y="143" width="338" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="VhW-ac-0h3">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <rect key="frame" x="-100" y="-100" width="15" height="143"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="L8q-qu-29Z">
+                                <rect key="frame" x="362" y="4" width="30" height="17"/>
+                                <buttonCell key="cell" type="bevel" title="Quit" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="OS2-cG-8GR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitButtonClicked:" target="XfG-lQ-9wD" id="n1m-TC-mPG"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D7n-QJ-T40">
+                                <rect key="frame" x="8" y="4" width="188" height="17"/>
+                                <buttonCell key="cell" type="bevel" title="Powered by OpenWeatherMap" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="7LZ-p0-xQU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="poweredByButtonClicked:" target="XfG-lQ-9wD" id="pFa-gT-gHa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wb1-Fd-624" secondAttribute="trailing" constant="20" id="3Z5-y7-5cX"/>
+                            <constraint firstItem="D7n-QJ-T40" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="DTl-Uk-CM2"/>
+                            <constraint firstAttribute="trailing" secondItem="L8q-qu-29Z" secondAttribute="trailing" constant="8" id="FSC-8L-3TR"/>
+                            <constraint firstItem="L8q-qu-29Z" firstAttribute="top" secondItem="wb1-Fd-624" secondAttribute="bottom" constant="10" id="IgC-F4-qqh"/>
                             <constraint firstAttribute="trailing" secondItem="TXe-Vl-fdQ" secondAttribute="trailing" constant="30" id="QaN-op-iiw"/>
                             <constraint firstItem="TXe-Vl-fdQ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="b47-GB-Oog"/>
                             <constraint firstItem="TXe-Vl-fdQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="dGf-Un-1iy"/>
+                            <constraint firstItem="D7n-QJ-T40" firstAttribute="top" secondItem="wb1-Fd-624" secondAttribute="bottom" constant="10" id="hCW-SU-ITe"/>
                             <constraint firstItem="wb1-Fd-624" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="oTV-0a-Lx3"/>
                             <constraint firstItem="wb1-Fd-624" firstAttribute="top" secondItem="TXe-Vl-fdQ" secondAttribute="bottom" constant="20" id="uxw-fI-Tns"/>
-                            <constraint firstAttribute="bottom" secondItem="wb1-Fd-624" secondAttribute="bottom" constant="20" id="viU-FR-1Gt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="I4q-nn-rsK" id="6nJ-B6-qf6"/>
                         <outlet property="dateLabel" destination="YYF-Us-MFh" id="sk0-Fv-9ub"/>
                         <outlet property="locationLabel" destination="B76-BQ-XpQ" id="ddi-2U-geN"/>
+                        <outlet property="poweredByButton" destination="D7n-QJ-T40" id="zmG-Yl-eF1"/>
+                        <outlet property="quitButton" destination="L8q-qu-29Z" id="V2L-cL-b6a"/>
                         <outlet property="temperatureLabel" destination="RVr-Cw-X9v" id="rEX-5F-Cxa"/>
                         <outlet property="weatherConditionLabel" destination="5kg-x2-9Ba" id="a3b-Jr-aFh"/>
                         <outlet property="weatherImage" destination="Axm-LY-kjH" id="lAw-yW-Gly"/>
