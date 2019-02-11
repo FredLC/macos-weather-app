@@ -17,10 +17,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.button?.title = "--°"
         statusItem.button?.action = #selector(AppDelegate.displayPopUp(_:))
+        
+        let updateWeatherData = Timer.scheduledTimer(timeInterval: 60 * 15, target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
+        updateWeatherData.tolerance = 60
+        downloadWeatherData()
+    }
+    
+    @objc func downloadWeatherData() {
         WeatherService.instance.downloadWeatherDetails {
             self.statusItem.button?.title = "\(WeatherService.instance.currentWeather.currentTemp)°"
             WeatherService.instance.downloadForecast(completed: {
-                print("hello")
+                NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
             })
         }
     }
