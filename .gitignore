@@ -1,4 +1,6 @@
 # Xcode
+## Secrets
+Weathered/Utilities/Constants.swift
 ## Build generated
 build/
 DerivedData/ 
