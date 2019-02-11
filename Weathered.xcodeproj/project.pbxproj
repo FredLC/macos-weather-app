@@ -11,6 +11,8 @@
 		48EB6ACA2211C5D900ED4B73 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB6AC92211C5D900ED4B73 /* WeatherVC.swift */; };
 		48EB6ACC2211C5DA00ED4B73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48EB6ACB2211C5DA00ED4B73 /* Assets.xcassets */; };
 		48EB6ACF2211C5DA00ED4B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48EB6ACD2211C5DA00ED4B73 /* Main.storyboard */; };
+		48EB6ADC2211DAD000ED4B73 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB6ADB2211DAD000ED4B73 /* WeatherCell.xib */; };
+		48EB6ADE2211DAF400ED4B73 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB6ADD2211DAF400ED4B73 /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		48EB6ACE2211C5DA00ED4B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48EB6AD02211C5DA00ED4B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48EB6AD12211C5DA00ED4B73 /* Weathered.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weathered.entitlements; sourceTree = "<group>"; };
+		48EB6ADB2211DAD000ED4B73 /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		48EB6ADD2211DAF400ED4B73 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +57,48 @@
 		48EB6AC62211C5D900ED4B73 /* Weathered */ = {
 			isa = PBXGroup;
 			children = (
+				48EB6ADA2211DA8300ED4B73 /* Model */,
+				48EB6AD92211DA7E00ED4B73 /* View */,
+				48EB6AD82211DA7800ED4B73 /* Controller */,
+				48EB6AD72211DA6E00ED4B73 /* Xibs */,
 				48EB6AC72211C5D900ED4B73 /* AppDelegate.swift */,
-				48EB6AC92211C5D900ED4B73 /* WeatherVC.swift */,
 				48EB6ACB2211C5DA00ED4B73 /* Assets.xcassets */,
 				48EB6ACD2211C5DA00ED4B73 /* Main.storyboard */,
 				48EB6AD02211C5DA00ED4B73 /* Info.plist */,
 				48EB6AD12211C5DA00ED4B73 /* Weathered.entitlements */,
 			);
 			path = Weathered;
+			sourceTree = "<group>";
+		};
+		48EB6AD72211DA6E00ED4B73 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				48EB6ADB2211DAD000ED4B73 /* WeatherCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		48EB6AD82211DA7800ED4B73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48EB6AC92211C5D900ED4B73 /* WeatherVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48EB6AD92211DA7E00ED4B73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48EB6ADD2211DAF400ED4B73 /* WeatherCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48EB6ADA2211DA8300ED4B73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +161,7 @@
 			files = (
 				48EB6ACC2211C5DA00ED4B73 /* Assets.xcassets in Resources */,
 				48EB6ACF2211C5DA00ED4B73 /* Main.storyboard in Resources */,
+				48EB6ADC2211DAD000ED4B73 /* WeatherCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +174,7 @@
 			files = (
 				48EB6ACA2211C5D900ED4B73 /* WeatherVC.swift in Sources */,
 				48EB6AC82211C5D900ED4B73 /* AppDelegate.swift in Sources */,
+				48EB6ADE2211DAF400ED4B73 /* WeatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
