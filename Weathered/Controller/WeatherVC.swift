@@ -49,7 +49,9 @@ class WeatherVC: NSViewController {
 extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let forecastItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "WeatherCell"), for: indexPath)
-        return forecastItem
+        guard let forecastCell = forecastItem as? WeatherCell else { return forecastItem }
+        forecastCell.configureCell(weatherCell: WeatherService.instance.forecast[indexPath.item])
+        return forecastCell
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
@@ -57,7 +59,7 @@ extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCol
     }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return WeatherService.instance.forecast.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
