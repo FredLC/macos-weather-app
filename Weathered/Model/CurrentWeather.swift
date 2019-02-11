@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class CurrentWeather {
     fileprivate var _cityName: String!
@@ -50,29 +51,19 @@ class CurrentWeather {
         let currentWeather = CurrentWeather()
         
         do {
-            let myJson = try JSONSerialization.jsonObject(with: APIData, options: .mutableContainers)
-            if let dict = myJson as? Dictionary<String, AnyObject> {
-                if let name = dict["name"] as? String {
-                    currentWeather._cityName = name
-                }
-                
-                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
-                    if let main = weather[0]["main"] as? String {
-                        currentWeather._weatherType = main
-                    }
-                }
-                
-                if let main = dict["main"] as? Dictionary<String, AnyObject> {
-                    if let currentTemp = main["temp"] as? Int {
-                        currentWeather._currentTemp = currentTemp
-                    }
-                }
-                
-                currentWeather.date = "Today"
-            }
+            let json = try JSON(data: APIData)
+            currentWeather.cityName = json["name"].stringValue.capitalized
+            currentWeather.weatherType = json["weather"][0]["main"].stringValue.capitalized
+            currentWeather.currentTemp = json["main"]["temp"].intValue
         } catch let error as NSError {
             print(error)
         }
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        let currentDate = formatter.string(from: Date())
+        currentWeather.date = "Today, \(currentDate)"
         
         return currentWeather
     }
